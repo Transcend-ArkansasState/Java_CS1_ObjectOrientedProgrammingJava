@@ -3,12 +3,28 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <!-- Group ID is often used to tell you who wrote certain -->
     <groupId>edu.asu.transcend</groupId>
-    <artifactId>hello-maven</artifactId>
+    <!-- artifactID is most often the name of the program -->
+    <artifactId>diamonds</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <!--
+     properties let us manage variables used in the POM. So if I want to change my main
+    class, I can do it here in <properties> and not go hunting for it below where the property is used instead.
+    -->
+    <properties>
+        <jar.mainClass>edu.transcend.diamonds.Main</jar.mainClass>
+    </properties>
+    <!--
+    Here in the <build> tag, we add extra configuration and plugins to change the behavior of Maven's default build.
+
+    -->
     <build>
         <plugins>
+            <!--
+            Dependency plugin will bundle all dependencies into a "lib" folder prior to "package" lifecycle goal.
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -27,6 +43,10 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--
+            Maven Jar plugin will add the "lib" folder to the classpath. *Note: Dependencies are in lib, not in the jar
+            Specifies the Main Class attribute on the Manifest.
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -35,9 +55,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>
-                                edu.asu.transcend.hello.HelloMaven
-                            </mainClass>
+                            <mainClass>${jar.mainClass}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
