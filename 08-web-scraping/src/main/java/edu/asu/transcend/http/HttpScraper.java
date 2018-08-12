@@ -14,6 +14,7 @@ public class HttpScraper {
         HttpGet httpGet = new HttpGet(DEFUALT_URL);
         try (CloseableHttpResponse response = httpClient.execute(httpGet)) {
             System.out.println("httpGet:  " + response.toString());
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

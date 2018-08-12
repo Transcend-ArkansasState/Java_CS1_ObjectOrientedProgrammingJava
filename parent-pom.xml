@@ -12,7 +12,8 @@
     <properties>
         <!-- Override this property in the child projects -->
         <jar.mainClass>edu.asu.transcend.Main</jar.mainClass>
-        <target.release>1.8</target.release>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 
