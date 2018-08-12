@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.asu.transcend</groupId>
+    <artifactId>hellomaven</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>edu.asu.transcend</groupId>
+        <artifactId>object-oriented-java-parent</artifactId>
+        <version>LATEST</version>
+        <relativePath>../parent-pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <jar.mainClass>edu.asu.transcend.hello.HelloMaven</jar.mainClass>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

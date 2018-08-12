@@ -9,6 +9,13 @@
     <artifactId>diamonds</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Using a Parent POM to Make this code easier to maintain and modify -->
+    <parent>
+        <groupId>edu.asu.transcend</groupId>
+        <artifactId>object-oriented-java-parent</artifactId>
+        <version>LATEST</version>
+        <relativePath>../parent-pom.xml</relativePath>
+    </parent>
     <!--
      properties let us manage variables used in the POM. So if I want to change my main
     class, I can do it here in <properties> and not go hunting for it below where the property is used instead.
@@ -18,9 +25,11 @@
     </properties>
     <!--
     Here in the <build> tag, we add extra configuration and plugins to change the behavior of Maven's default build.
-
     -->
     <build>
+        <!-- Because of the use of a Parent POM with these plugins configured in <PluginManagement> we
+        can use those configurations by just declaring the plugins.
+        -->
         <plugins>
             <!--
             Dependency plugin will bundle all dependencies into a "lib" folder prior to "package" lifecycle goal.
@@ -28,20 +37,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>
-                                ${project.build.directory}/libs
-                            </outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
+
             </plugin>
             <!--
             Maven Jar plugin will add the "lib" folder to the classpath. *Note: Dependencies are in lib, not in the jar
@@ -50,15 +46,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>${jar.mainClass}</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
         </plugins>
     </build>
