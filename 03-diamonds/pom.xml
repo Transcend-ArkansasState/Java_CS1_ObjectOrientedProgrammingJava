@@ -37,7 +37,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-
             </plugin>
             <!--
             Maven Jar plugin will add the "lib" folder to the classpath. *Note: Dependencies are in lib, not in the jar
