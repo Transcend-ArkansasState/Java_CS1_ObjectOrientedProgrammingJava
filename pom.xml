@@ -17,6 +17,11 @@
         <module>03-diamonds</module>
         <module>05-sphere</module>
         <module>04-numberguessing</module>
+        <module>06-arrays-and-counting</module>
+        <module>08-web-scraping</module>
+        <module>10-rock-paper-scissors</module>
+        <module>11-method-examples</module>
+        <module>flow-chart</module>
     </modules>
 
 

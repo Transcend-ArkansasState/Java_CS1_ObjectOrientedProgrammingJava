@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>object-oriented-java-parent</artifactId>
+        <groupId>edu.asu.transcend</groupId>
+        <version>LATEST</version>
+        <relativePath>../parent-pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>arrays-and-counting</artifactId>
+    <packaging>pom</packaging>
+
+
+</project>
