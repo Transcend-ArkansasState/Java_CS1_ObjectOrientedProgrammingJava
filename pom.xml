@@ -25,5 +25,56 @@
         <module>order-of-operations</module>
     </modules>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <stagingDirectory>${project.basedir}/stage-site</stagingDirectory>
+                    <reportPlugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-project-info-reports-plugin</artifactId>
+                            <version>2.4</version>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-javadoc-plugin</artifactId>
+                            <version>2.8</version>
+                            <configuration></configuration>
+                            <reportSets>
+                                <reportSet>
+                                    <id>non-aggregate</id>
+                                    <configuration>
+                                        <!-- Specific configuration for the aggregate report -->
+                                        <sourcepath>${project.build.sourceDirectory}/../generated</sourcepath>
+                                    </configuration>
+                                    <reports>
+                                        <report>javadoc</report>
+                                    </reports>
+                                </reportSet>
+                                <reportSet>
+                                    <id>aggregate</id>
+                                    <configuration>
+                                        <!-- Specific configuration for the aggregate report -->
+                                        <sourcepath>${project.build.sourceDirectory}/../generated</sourcepath>
+                                    </configuration>
+                                    <reports>
+                                        <report>aggregate</report>
+                                    </reports>
+                                </reportSet>
+                            </reportSets>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-report-plugin</artifactId>
+                            <version>2.6</version>
+                        </plugin>
+                    </reportPlugins>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

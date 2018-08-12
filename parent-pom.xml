@@ -61,7 +61,17 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!--
+                <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-site-plugin</artifactId>-->
+                <!--<version>3.3</version>-->
+                <!--</plugin>-->
+                <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-project-info-reports-plugin</artifactId>-->
+                <!--<version>2.7</version>-->
+                <!--</plugin>-->
+                <!--&lt;!&ndash;-->
                 Dependency plugin will bundle all dependencies into a "lib" folder prior to "package" lifecycle goal.
                 -->
                 <plugin>

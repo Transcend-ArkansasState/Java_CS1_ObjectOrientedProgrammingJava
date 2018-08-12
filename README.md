@@ -32,7 +32,7 @@ Hello World
 ## 02-hellodave
 This is "Hello World" but it asks your name first, and repeats it back to you.
 ```sh
-~/> mvn clean -e package -f 02-helodave/pom.xml
+~/> mvn clean -e package -f 02-hellodave/pom.xml
 ~/> java -jar 02-hellodave/targethellodave-LATEST.jar
 What's your name?
 Adam
