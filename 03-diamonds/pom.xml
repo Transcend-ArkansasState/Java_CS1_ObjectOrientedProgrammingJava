@@ -3,8 +3,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- Group ID is often used to tell you who wrote certain -->
-    <groupId>edu.asu.transcend</groupId>
+
     <!-- artifactID is most often the name of the program -->
     <artifactId>diamonds</artifactId>
     <version>1.0-SNAPSHOT</version>
