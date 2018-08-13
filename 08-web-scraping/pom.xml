@@ -19,12 +19,6 @@
     The Try with Resources is a Java 8 or higher feature. If your editor is configured to a version of java before 8, this one module will fail for no discernible reason.
     -->
 
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/site/${project.artifactId}</url>
-        </site>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -35,20 +29,4 @@
     </dependencies>
 
 
-    <build>
-        <plugins>
-            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-            <!-- End solution -->
-        </plugins>
-    </build>
 </project>

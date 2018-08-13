@@ -9,32 +9,5 @@
     <version>LATEST</version>
     <name>diamond demo</name>
 
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/site/${project.artifactId}</url>
-        </site>
-    </distributionManagement>
 
-
-    <properties>
-        <jar.mainClass>edu.transcend.diamonds.Main</jar.mainClass>
-    </properties>
-
-    <build>
-        <plugins>
-            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-            <!-- End solution -->
-        </plugins>
-    </build>
 </project>

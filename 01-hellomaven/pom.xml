@@ -9,18 +9,16 @@
     <version>LATEST</version>
 
     <name>hellomaven</name>
+
     <properties>
         <jar.mainClass>edu.asu.transcend.hello.HelloMaven</jar.mainClass>
     </properties>
 
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/site/${project.artifactId}</url>
-        </site>
-    </distributionManagement>
 
     <dependencies>
+        <!-- These are test dependencies used to validate this code before Committing to GitHub.
+        This is not require to execute the resulting .Jar file, but is needed during build time
+        -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -35,23 +33,5 @@
             <version>2.15.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-    <build>
-        <plugins>
-            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-            <!-- End solution -->
-        </plugins>
-    </build>
-
 </project>

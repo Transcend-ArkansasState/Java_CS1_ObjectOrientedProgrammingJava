@@ -1,10 +1,14 @@
 # Java_CS1_ObjectOrientedProgrammingJava
-NetBeans Projects for modules in Object Oriented Programming in Java (Computer Science Level 1)
+Maven Java Projects for code exercises and examples for Object Oriented Programming in Java (Computer Science Level 1)
+
+These examples cover entry-level Computer Science topics, such as primitive datatypes, Standard input/output reading f
+rom the console, and working with objects, methods, and flow control concepts.
+
 
 # Quick Start
 
 It is recommended that the entire project be built all at once using the modules pom
-```sh
+```bat
 mvn clean -e install -f pom.xml
 ```
 
@@ -14,9 +18,9 @@ This POM will build all of the submodules and execute unit tests so that any mod
 ## 01-hellomaven
 This is a basic HelloWorld example using Maven.
 
-```sh
+```bat
 ~/> mvn clean -e package -f 01-hellomaven/pom.xml
-~/> java -jar 01-hellomaven/target/hellomaven-LATEST.jar
+~/> java -jar 01-hellomaven\target\hellomaven-LATEST.jar
 
 Hello World
 
@@ -24,9 +28,9 @@ Hello World
 ```
 ## 02-hellodave
 This is "Hello World" but it asks your name first, and repeats it back to you.
-```sh
-~/> mvn clean -e package -f 02-hellodave/pom.xml
-~/> java -jar 02-hellodave/targethellodave-LATEST.jar
+```bat
+~/> mvn clean -e package -f 02-hellodave\pom.xml
+~/> java -jar 02-hellodave\targethellodave-LATEST.jar
 What's your name?
 Adam
 Hello, Adam
@@ -35,7 +39,8 @@ Hello, Adam
 ```
 
 ## 03-diamonds
-Print a diamon made of astrisks. Use a number from user Input to determine the size of the diamond.
+Print a diamond made of asterisks. Use a number from user Input to determine the size of the diamond.
+
 ## 04-numberguessing
 Play a number guessing game with the user. How many guesses does it take?
 ## 05-sphere
@@ -45,11 +50,10 @@ Calculate the volume of a sphere, given radius in meters from the user.
 
 This Course and the Course Content are currently under construction. Everything here is subject to change.
 
-##TODO:
+## TODO:
 - [X] Unit test stdio and input
 - [X] Build all at once with module pom.
-- [ ] Need to un-abstract POMs after finalizing the settings.
-- [ ] Need to change executable Jar config to also make uber-jar/fat-jar with dependencies included for portability
+- [X] Need to change executable Jar config to also make uber-jar/fat-jar with dependencies included for portability
 - [ ] Need to add Comments for Java Docs
 - [ ] ArrayCount.java //TODO:
 - [ ] Diamonds.java //TODO:
@@ -61,9 +65,6 @@ This Course and the Course Content are currently under construction. Everything 
 - [ ] SerializeObjects.java // TODO: Deserialize Object from file
 - [ ] Create run instructions for each one.
 ## Nice To Have:
-- [ ] add maven goals to parse Java Docs and Help Text
-- [ ] unit-test coverage, and unit-tests for grading homework
-- [ ] Java Doc Publishing site (can this be built to gitHub?)
 - [ ] Full Markdown readmes for everyrhing.
 - [ ] CS Standards citations in the Java Doc Comments with a brief justification
 - [ ] Document all the modules

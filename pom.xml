@@ -6,25 +6,19 @@
 
     <groupId>edu.asu.transcend</groupId>
     <artifactId>object-oriented-java-modules</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>LATEST</version>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
-        <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
     </properties>
 
-    <distributionManagement>
-
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/website</url>
-        </site>
-    </distributionManagement>
 
     <dependencies>
+        <!-- These are test dependencies used to validate this code before Committing to GitHub.
+        This is not require to execute the resulting .Jar file, but is needed during build time
+        -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -56,81 +50,5 @@
         <module>flow-chart</module>
         <module>order-of-operations</module>
     </modules>
-    <!-- https://xebia.com/blog/reporting-on-a-multi-module-project-with-maven2/-->
-    <build>
-        <plugins>
-            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>${maven-project-info-reports-plugin.version}</version>
-            </plugin>
-            <!-- End solution -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <!-- Default configuration for all reports -->
 
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>aggregate</id>
-                        <goals>
-                            <goal>aggregate</goal>
-                        </goals>
-                        <phase>site</phase>
-                        <configuration>
-                            <!-- Specific configuration for the aggregate report -->
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <!-- Default configuration for all reports -->
-                </configuration>
-                <reportSets>
-                    <reportSet>
-                        <id>non-aggregate</id>
-                        <configuration>
-                            <!-- Specific configuration for the non aggregate report -->
-
-                        </configuration>
-                        <reports>
-                            <report>javadoc</report>
-                            <report>test-javadoc</report>
-
-                        </reports>
-                    </reportSet>
-                    <reportSet>
-                        <id>aggregate</id>
-                        <configuration>
-                            <!-- Specific configuration for the aggregate report -->
-
-                        </configuration>
-                        <reports>
-                            <report>aggregate</report>
-                        </reports>
-                    </reportSet>
-
-                </reportSets>
-            </plugin>
-
-        </plugins>
-    </reporting>
 </project>
