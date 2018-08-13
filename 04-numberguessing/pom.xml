@@ -9,10 +9,9 @@
     <version>LATEST</version>
 
     <distributionManagement>
-
         <site>
             <id>website</id>
-            <url>file://${basedir}/website</url>
+            <url>file://${basedir}/../website/${project.artifactId}</url>
         </site>
     </distributionManagement>
 

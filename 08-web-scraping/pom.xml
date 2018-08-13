@@ -7,14 +7,25 @@
     <groupId>edu.asu.transcend</groupId>
     <artifactId>web-scraping</artifactId>
     <version>LATEST</version>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+
     <!--
     Curiously enough, the "try-with-resources" is the only Java Language use in this code so far that uses API's newer than Java 5
     The Try with Resources is a Java 8 or higher feature. If your editor is configured to a version of java before 8, this one module will fail for no discernible reason.
     -->
+
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>file://${basedir}/site/${project.artifactId}</url>
+        </site>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -22,13 +33,7 @@
             <version>4.5.6</version>
         </dependency>
     </dependencies>
-    <distributionManagement>
 
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/website</url>
-        </site>
-    </distributionManagement>
 
     <build>
         <plugins>

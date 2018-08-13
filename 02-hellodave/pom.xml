@@ -11,6 +11,14 @@
     <properties>
         <jar.mainClass>edu.asu.transcend.hellodave.HelloDave</jar.mainClass>
     </properties>
+
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>file://${basedir}/site/${project.artifactId}</url>
+        </site>
+    </distributionManagement>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
@@ -29,13 +37,6 @@
 
     </dependencies>
 
-    <distributionManagement>
-
-        <site>
-            <id>website</id>
-            <url>file://${basedir}/website</url>
-        </site>
-    </distributionManagement>
 
     <build>
         <plugins>

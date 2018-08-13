@@ -103,7 +103,6 @@
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <!-- Default configuration for all reports -->
-
                 </configuration>
                 <reportSets>
                     <reportSet>
@@ -114,6 +113,8 @@
                         </configuration>
                         <reports>
                             <report>javadoc</report>
+                            <report>test-javadoc</report>
+
                         </reports>
                     </reportSet>
                     <reportSet>
@@ -129,29 +130,7 @@
 
                 </reportSets>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
 
-                <configuration>
-                    <!-- Default configuration for all reports -->
-
-                </configuration>
-                <reportSets>
-
-                    <reportSet>
-                        <id>aggregate</id>
-                        <configuration>
-                            <!-- Specific configuration for the aggregate report -->
-
-                        </configuration>
-                        <reports>
-                            <report>summary</report>
-                        </reports>
-                    </reportSet>
-
-                </reportSets>
-            </plugin>
         </plugins>
     </reporting>
 </project>

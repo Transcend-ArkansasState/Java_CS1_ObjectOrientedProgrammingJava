@@ -8,15 +8,15 @@
     <artifactId>hellomaven</artifactId>
     <version>LATEST</version>
 
+    <name>hellomaven</name>
     <properties>
         <jar.mainClass>edu.asu.transcend.hello.HelloMaven</jar.mainClass>
     </properties>
 
     <distributionManagement>
-
         <site>
             <id>website</id>
-            <url>file://${basedir}/website</url>
+            <url>file://${basedir}/site/${project.artifactId}</url>
         </site>
     </distributionManagement>
 

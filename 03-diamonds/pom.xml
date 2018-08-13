@@ -7,11 +7,12 @@
     <groupId>edu.asu.transcend</groupId>
     <artifactId>diamonds</artifactId>
     <version>LATEST</version>
-    <distributionManagement>
+    <name>diamond demo</name>
 
+    <distributionManagement>
         <site>
             <id>website</id>
-            <url>file://${basedir}/website</url>
+            <url>file://${basedir}/site/${project.artifactId}</url>
         </site>
     </distributionManagement>
 
