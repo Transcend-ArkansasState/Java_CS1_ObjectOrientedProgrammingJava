@@ -2,15 +2,41 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>object-oriented-java-parent</artifactId>
-        <groupId>edu.asu.transcend</groupId>
-        <version>LATEST</version>
-        <relativePath>../parent-pom.xml</relativePath>
-    </parent>
+    <groupId>edu.asu.transcend</groupId>
+
+    <version>LATEST</version>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>method-examples</artifactId>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <distributionManagement>
+
+        <site>
+            <id>website</id>
+            <url>file://${basedir}/website</url>
+        </site>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!-- End solution -->
+        </plugins>
+    </build>
 
 </project>

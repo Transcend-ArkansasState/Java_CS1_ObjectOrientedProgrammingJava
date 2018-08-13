@@ -2,20 +2,48 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>object-oriented-java-parent</artifactId>
-        <groupId>edu.asu.transcend</groupId>
-        <version>LATEST</version>
-        <relativePath>../parent-pom.xml</relativePath>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>edu.asu.transcend</groupId>
     <artifactId>web-scraping</artifactId>
+    <version>LATEST</version>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <!--
+    Curiously enough, the "try-with-resources" is the only Java Language use in this code so far that uses API's newer than Java 5
+    The Try with Resources is a Java 8 or higher feature. If your editor is configured to a version of java before 8, this one module will fail for no discernible reason.
+    -->
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
         </dependency>
     </dependencies>
+    <distributionManagement>
 
+        <site>
+            <id>website</id>
+            <url>file://${basedir}/website</url>
+        </site>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!-- To Solve problem like - https://stackoverflow.com/questions/51091539/maven-site-plugins-3-3-java-lang-classnotfoundexception-org-apache-maven-doxia -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!-- End solution -->
+        </plugins>
+    </build>
 </project>

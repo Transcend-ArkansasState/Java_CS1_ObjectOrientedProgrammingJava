@@ -2,22 +2,15 @@
 NetBeans Projects for modules in Object Oriented Programming in Java (Computer Science Level 1)
 
 # Quick Start
-This collection of maven projects all depend on the parent-pom.xml project being built in your local Maven repository if you wish to run them seperately 
-```sh
-mvn clean -e install -f parent-pom.xml
-```
-It is recommended that the entire project be built (which will include the parent) all at once using the modules pom
+
+It is recommended that the entire project be built all at once using the modules pom
 ```sh
 mvn clean -e install -f pom.xml
 ```
 
 ## pom.xml
 This POM will build all of the submodules and execute unit tests so that any modifications or updates can be quickly validated.
-## parent-pom.xml
-This POM controls all the JUnit versions and Mockito versions for tests, as well as the Build Configurations used to make executable Jars.
-The ${jar.mainClass} property must be overriden by the child project for the jar plugin declarations to work properly.
 
-This project will likely go away after test configurations have been finalized.
 ## 01-hellomaven
 This is a basic HelloWorld example using Maven.
 
