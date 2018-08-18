@@ -20,13 +20,16 @@
         <module>01-exer-numberguessing</module>
         <module>02-demo-arrays-and-counting</module>
         <module>02-demo-triangles</module>
-        <module>03-demo-temperatureConverter</module>
         <module>02-exer-diamonds</module>
+        <module>03-demo-temperatureConverter</module>
+        <module>03-demo-fileInputOutput</module>
+
         <module>web-scraping</module>
         <module>rock-paper-scissors</module>
         <module>demo-object-serialization</module>
         <module>exer-flow-chart</module>
         <module>order-of-operations</module>
+
     </modules>
 
 </project>
