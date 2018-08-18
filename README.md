@@ -121,9 +121,9 @@ This Course and the Course Content are currently under construction. Everything 
     - [X] helloMaven
     - [X] helloDave
     - [ ]  diamonds
-    - [ ] numberGuessingGame
+    - [X] numberGuessingGame
     - [ ] sphere
-    - [ ]  arrays and counting
+    - [X]  arrays and counting
     - [ ] object serializing
     - [ ]  web-scraper
     - [ ] rockPaperScissors.jar
@@ -133,7 +133,7 @@ This Course and the Course Content are currently under construction. Everything 
 
 - [ ] ArrayCount.java //TODO:
 - [ ] Diamonds.java //TODO:
-- [ ] Guessing.java //TODO:
+- [X] Guessing.java //TODO:
 - [ ] SerializeObjects.java //TODO: add "read" and "write" args with filenames
 - [ ] SerializeObjects.java // TODO: Import GSON
 - [ ] SerializeObjects.java // TODO: Create GSON instance
@@ -142,12 +142,7 @@ This Course and the Course Content are currently under construction. Everything 
 - [ ] Create run instructions for each one.
 - [ ] Re-order modules with numeric names to match their Course module numbers.
 - [ ] Add Code Modules to Course Module Outlines in blackboard
-- [ ] Create Boolean Quiz
-- [ ] Create Operator Quiz
-- [ ] Create primitive DataType Quiz
-- [ ] Create Object/Method Quiz
-- [ ] Create Computer Hardware Quiz
-- [ ] Create Computer Software Layers Quiz
+
 
 ## Nice To Have:
 - [ ] Full Markdown readmes for everyrhing.
