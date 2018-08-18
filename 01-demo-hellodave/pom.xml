@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.asu.transcend</groupId>
+    <artifactId>hellodave</artifactId>
+    <version>LATEST</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <jar.mainClass>edu.asu.transcend.hellodave.HelloDave</jar.mainClass>
+    </properties>
+
+    <dependencies>
+        <!-- These are test dependencies used to validate this code before Committing to GitHub.
+        This is not require to execute the resulting .Jar file, but is needed during build time
+        -->
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.3.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

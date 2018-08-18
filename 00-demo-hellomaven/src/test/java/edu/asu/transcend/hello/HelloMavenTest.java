@@ -10,8 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 
-
-
+// Note: Using JUnit5 so this code survives longer into the future
 public class HelloMavenTest {
     // Setting up Variables so we can use them to interact with System.in and System.out
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

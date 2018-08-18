@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.asu.transcend</groupId>
-    <artifactId>object-oriented-java-modules</artifactId>
+    <artifactId>oop-java-aggregate</artifactId>
     <version>LATEST</version>
     <packaging>pom</packaging>
 
@@ -14,36 +14,16 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-
-    <dependencies>
-        <!-- These are test dependencies used to validate this code before Committing to GitHub.
-        This is not require to execute the resulting .Jar file, but is needed during build time
-        -->
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.3.0-M1</version>
-            <scope>test</scope>
-        </dependency>
-
-
-    </dependencies>
-
-
     <modules>
         <module>00-demo-hellomaven</module>
+        <module>01-demo-hellodave</module>
         <module>01-exer-numberguessing</module>
-
-        <module>02-hellodave</module>
-        <module>03-diamonds</module>
-        <module>05-sphere</module>
-        <module>06-arrays-and-counting</module>
-        <module>07-object-serialization</module>
-        <module>08-web-scraping</module>
-        <module>10-rock-paper-scissors</module>
-        <module>11-method-examples</module>
-        <module>flow-chart</module>
+        <module>03-demo-arrays-and-counting</module>
+        <module>03-exer-diamonds</module>
+        <module>web-scraping</module>
+        <module>rock-paper-scissors</module>
+        <module>demo-object-serialization</module>
+        <module>exer-flow-chart</module>
         <module>order-of-operations</module>
     </modules>
 
