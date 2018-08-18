@@ -32,7 +32,7 @@
 
 
     <modules>
-        <module>01-demo-hellomaven</module>
+        <module>00-demo-hellomaven</module>
         <module>01-exer-numberguessing</module>
 
         <module>02-hellodave</module>

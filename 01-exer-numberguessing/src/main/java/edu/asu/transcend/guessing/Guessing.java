@@ -7,23 +7,35 @@ public class Guessing {
     public static void main(String[] args) {
         // Create a Scanner to read from the Standard In "System.in"
         Scanner scanner = new Scanner(System.in);
+        /** 1) Select a random whole number between 1 and 15 and save as a variable **/
         int numberToGuess = getRandomNumberFromJava();
-        System.out.println("I guessed : " + numberToGuess);
-
+        // Uncomment the following line, and the computer will tell you what it guessed. Handy when you're testing
+        // System.out.println("I guessed : " + numberToGuess);
+        /** 2) Prompt the user for number input and save as a variable **/
         System.out.println("Guess what number I picked! Between 0 and 15");
         int numberToCompare = -1;
-
+        int counter = 0;
         // Do this guess and check procedure until the values are equal
         do {
-            numberToCompare = scanner.nextInt();
-            if (numberToCompare > numberToGuess) {
-                System.out.println("Too High, try again.");
-            } else if (numberToCompare < numberToGuess) {
-                System.out.println("Too Low, try again.");
+            try {
+                numberToCompare = scanner.nextInt();
+                counter++;
+                /** 4) Compare input to randomly selected number **/
+                /** 5) Print "To high/Too Low Try again" or "You guessed right!" based on the comparison results [phrasing can be adjusted] **/
+                if (numberToCompare > numberToGuess) {
+                    System.out.println("Too High, try again.");
+                } else if (numberToCompare < numberToGuess) {
+                    System.out.println("Too Low, try again.");
+                }
+            } catch (Exception ex) {
+                /**  3) If input is not a number, try again. If input is not a whole number, round down.
+                 Use java.util.Scanner and try{}catch{} keywords **/
+                System.out.println("That input isn't right... try again!");
             }
-        } while (!(numberToCompare == numberToGuess));
+        } while (!(numberToCompare == numberToGuess));// * 6) Repeat steps 2 through 4 until the user guesses correctly.
         // If the code makes it here, then we've guessed the right number.
-        System.out.println("You got it!");
+        /** 7) Print how many guesses it took the user to get the right one.**/
+        System.out.println("You got it in " + counter + " guesses!");
     }
 
     /**
