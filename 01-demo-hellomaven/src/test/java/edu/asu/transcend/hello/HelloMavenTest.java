@@ -1,30 +1,34 @@
 package edu.asu.transcend.hello;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+
 
 
 public class HelloMavenTest {
+    // Setting up Variables so we can use them to interact with System.in and System.out
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
 
-    @Before
+    @BeforeEach
     public void setUpStreams() {
+        // Overriding System.out and System.err so we can intercept and validate
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
 
-    @After
+    @AfterEach
     public void restoreStreams() {
+        // Undoing the Stream rewriting, just in case we add tests later that run after this.
         System.setOut(originalOut);
         System.setErr(originalErr);
     }
@@ -32,6 +36,7 @@ public class HelloMavenTest {
     @Test
     public void mainTest() {
         HelloMaven.main(new String[]{});
-        assertEquals("Hello World", outContent.toString().trim());
+        // We know what it should say, let's see if it said it.
+        Assertions.assertEquals("Hello World", outContent.toString().trim());
     }
 }

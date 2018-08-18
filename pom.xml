@@ -21,28 +21,23 @@
         -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.3.0-M1</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>2.15.0</version>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
 
     <modules>
-        <module>01-hellomaven</module>
+        <module>01-demo-hellomaven</module>
+        <module>01-exer-numberguessing</module>
+
         <module>02-hellodave</module>
         <module>03-diamonds</module>
         <module>05-sphere</module>
-        <module>04-numberguessing</module>
         <module>06-arrays-and-counting</module>
         <module>07-object-serialization</module>
         <module>08-web-scraping</module>
