@@ -18,8 +18,10 @@
         <module>00-demo-hellomaven</module>
         <module>01-demo-hellodave</module>
         <module>01-exer-numberguessing</module>
-        <module>03-demo-arrays-and-counting</module>
-        <module>03-exer-diamonds</module>
+        <module>02-demo-arrays-and-counting</module>
+        <module>02-demo-triangles</module>
+        <module>03-demo-temperatureConverter</module>
+        <module>02-exer-diamonds</module>
         <module>web-scraping</module>
         <module>rock-paper-scissors</module>
         <module>demo-object-serialization</module>

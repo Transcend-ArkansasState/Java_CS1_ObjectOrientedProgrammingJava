@@ -6,7 +6,11 @@
 
     <groupId>edu.asu.transcend</groupId>
     <artifactId>diamonds</artifactId>
+    <packaging>pom</packaging>
     <version>LATEST</version>
+    <modules>
+        <module>temperatureConverter</module>
+    </modules>
     <name>diamond demo</name>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -6,6 +6,7 @@
 
     <groupId>edu.asu.transcend</groupId>
     <artifactId>object-serialization</artifactId>
+    <packaging>pom</packaging>
     <version>LATEST</version>
 
     <properties>
