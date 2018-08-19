@@ -28,7 +28,6 @@
         <module>demo-object-serialization</module>
         <module>exer-flow-chart</module>
         <module>order-of-operations</module>
-
     </modules>
 
 </project>
