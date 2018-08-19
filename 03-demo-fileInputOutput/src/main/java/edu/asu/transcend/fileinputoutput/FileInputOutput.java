@@ -6,13 +6,14 @@ import java.util.Scanner;
 
 // https://www.mkyong.com/java/java-read-a-text-file-line-by-line/
 // https://www.mkyong.com/java/how-to-write-to-file-in-java-bufferedwriter-example/
-//https://www.mkyong.com/java/how-to-write-to-file-in-java-fileoutputstream-example/
-//https://www.mkyong.com/java/how-to-read-and-write-java-object-to-a-file/
+// https://www.mkyong.com/java/how-to-write-to-file-in-java-fileoutputstream-example/
+// https://www.mkyong.com/java/how-to-read-and-write-java-object-to-a-file/
+// https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file
 public class FileInputOutput {
 
     public static void main(String[] args) {
         //TODO:
-        // write data to a file randomly, then print traingles based on that data
+        // write data to a file randomly, then print triangles based on that data
         writeRandomNumbersToAFile();
         readDataAndPrintTraingles();
     }

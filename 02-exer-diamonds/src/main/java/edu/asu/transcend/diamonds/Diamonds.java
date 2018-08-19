@@ -8,7 +8,7 @@ public class Diamonds {
         // TODO: Executable Jar
         // TODO: How to run the Jar from command line with args.
 
-        int height = 11;
+        int height = 12;
         int spaces = height / 2;
         int asterisk = 1;
         for (int i = 0; i < height / 2; i++) {
@@ -24,7 +24,8 @@ public class Diamonds {
             spaces--;
             asterisk += 2;
         }
-
+        // Just to trim up our diamond
+        asterisk -= 1;
         for (int i = 0; i <= height / 2; i++) {
             for (int j = 0; j < spaces; j++) {
                 // Print a Blank space

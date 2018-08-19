@@ -23,7 +23,6 @@
         <module>02-exer-diamonds</module>
         <module>03-demo-temperatureConverter</module>
         <module>03-demo-fileInputOutput</module>
-
         <module>web-scraping</module>
         <module>rock-paper-scissors</module>
         <module>demo-object-serialization</module>
