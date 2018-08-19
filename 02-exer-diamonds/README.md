@@ -1,2 +1,4 @@
 # Asterisk Diamonds Program 
-TODO: Documentation
+## Psedudo Code:
+
+## Flow Chart
