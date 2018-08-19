@@ -105,3 +105,7 @@ which is the package name, followed by the class name.
 This Course and the Course Content are currently under construction.
 Everything here is subject to change.
 
+Note to Instructor: Not all of this code was used in the course, and not all of the code has been fully commented and explained. 
+I may be able to add more documentation later, but I'm not sure. This would be an easy effort for future instructors to undertake. 
+
+
