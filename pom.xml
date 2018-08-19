@@ -28,6 +28,8 @@
         <module>demo-object-serialization</module>
         <module>exer-flow-chart</module>
         <module>order-of-operations</module>
+        <module>triangle-by-algorithm</module>
+
     </modules>
 
 </project>

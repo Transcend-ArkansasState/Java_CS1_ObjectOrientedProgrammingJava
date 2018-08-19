@@ -1,4 +1,4 @@
-package edu.transcend.objects;
+package edu.transcend.objectserialize;
 
 import java.util.Date;
 
